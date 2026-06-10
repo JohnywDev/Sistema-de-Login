@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/react-plugin' // ou @vitejs/plugin-react
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: 'https://johnywdev.github.io/Sistema-de-Login/', 
+  base: './', // Mude para './' para evitar erros de link absoluto
 })
