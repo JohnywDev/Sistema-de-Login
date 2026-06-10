@@ -20,7 +20,8 @@ export default function Login() {
       {/* Barra do topo com a logo */}
       <header className="top-bar">
         <div className="logo">
-          <img src="./assets/Usuarios.jpg" alt="Logo da Empresa" />
+          {/* 💡 COPIE ESSA LINHA EXATAMENTE ASSIM, COM OS NÚMEROS NO FINAL */}
+          <img src="https://picsum.photos" alt="Logo da Empresa" />
         </div>
       </header>
 
@@ -46,7 +47,7 @@ export default function Login() {
               type="password"
               id="password"
               placeholder="Digite sua senha"
-              value={password} // Adicionado de volta para o campo não travar
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>

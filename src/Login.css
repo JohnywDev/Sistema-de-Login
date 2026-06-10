@@ -1,17 +1,46 @@
-/* Centraliza o formulário na tela inteira */
+css/* 1. Mudamos o estilo do body para controlar a tela inteira */
 body {
-
+  margin: 0;
+  padding: 0;
   background-color: #232323;
-}
-
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #ffffff;
   font-family: sans-serif;
 }
+
+/* 2. Criamos uma caixa para segurar o topo e o formulário juntos */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff; /* O fundo branco agora fica na tela toda */
+}
+
+/* 3. Estilo para a barra do topo onde fica a logo */
+.top-bar {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; /* Centraliza a logo no topo */
+  background-color: #dfdfdf; /* Cor cinza claro para destacar a barra */
+}
+
+/* 4. Removemos o 'position: absolute' que quebrava a foto */
+.logo img {
+  width: 150px;
+  height: auto; /* O 'auto' evita que a foto fique esticada ou achatada */
+  display: block;
+}
+
+/* 5. Ajustamos o container para ocupar apenas o espaço que sobrou abaixo do topo */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* Faz o formulário preencher o resto da tela */
+  padding: 20px;
+}
+
+/* --- DAQUI PARA BAIXO O SEU CÓDIGO CONTINUA IGUAL --- */
 
 /* Caixa branca do formulário */
 .login-form {
@@ -87,14 +116,4 @@ body {
 
 .signup-link a:hover {
   text-decoration: underline;
-}
-
-.page-wrapper img {
-
-  width: 150px;
-  height: 100px;
-  display: flex;
-  align-items: flex-start;
-  position: absolute;
-  
 }
