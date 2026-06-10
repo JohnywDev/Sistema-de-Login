@@ -16,4 +16,8 @@ function App() {
 
 
 export default App
+export default defineConfig({
+  plugins: [react()],
+  base: 'https://johnywdev.github.io/Sistema-de-Login/', //adicione o nome exato do seu projeto no git aqui
+})
 
